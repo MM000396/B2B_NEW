@@ -1,7 +1,11 @@
 <?php
 $pageTitle = 'Login';
 require_once('../includes/header.php');
-require_once('../includes/language-switch.php')
+require_once('../includes/language-switch.php');
+if (empty($_SERVER['HTTP_REFERER'])) {
+    header("Location: https://udina-columbustp-test.authentication.eu10.hana.ondemand.com");
+    exit;
+}
 ?>
     <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">

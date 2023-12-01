@@ -3,7 +3,7 @@ $pageTitle = 'Login';
 require_once('../includes/header.php');
 require_once('../includes/language-switch.php');
 $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-print_r($ref);
+
 if (strpos($ref, 'https://udina-columbustp') == false) {
     header("Location: https://udina-columbustp-test.authentication.eu10.hana.ondemand.com");
     exit;

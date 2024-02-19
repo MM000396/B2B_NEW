@@ -5,7 +5,8 @@ require_once('../includes/language-switch.php');
 ?>
 <?php
     $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-     if (strpos($ref, 'https://udina-columbustp') == false) {
+    //if (strpos($ref, 'https://udina-columbustp') == false) {
+    if (strpos($ref, 'https://udina-columbustp') == true) {
         header("Location: https://udina-columbustp-test.authentication.eu10.hana.ondemand.com");
          exit;
      }

@@ -5,11 +5,11 @@ require_once('../includes/language-switch.php');
 ?>
 <?php
     $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-    //if (strpos($ref, 'https://udina-columbustp') == false) {
-    if (strpos($ref, 'https://b2b-login-dev.columbustp.com') == false) {
+    if ( (strpos($ref, 'https://udina-columbustp') == false) && (strpos($ref, 'b2b-login-dev.columbustp.com') == false) ) {
         header("Location: https://udina-columbustp-test.authentication.eu10.hana.ondemand.com");
          exit;
      }
+    }
 ?>
     <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">

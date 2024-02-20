@@ -5,8 +5,7 @@ require_once('../includes/language-switch.php');
 ?>
 <?php
     $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-    print("THE REF IS".$ref);
-    if ( (strpos($ref, 'https://b2b-login-dev.columbustp.com') == false) ) {
+    if ( $ref == "" ) {
         header("Location: https://udina-columbustp-test.authentication.eu10.hana.ondemand.com");
         exit;
      }

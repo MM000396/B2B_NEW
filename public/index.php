@@ -2,11 +2,12 @@
 $pageTitle = 'Login';
 require_once('../includes/header.php');
 require_once('../includes/language-switch.php');
+require_once('../.env.php');
 ?>
 <?php
     $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-    if (strpos($ref, "https://b2b-login-dev.columbustp") === false) {
-        header("Location: https://udina-columbustp-test.authentication.eu10.hana.ondemand.com");
+    if (strpos($ref, REFERER_URL) === false) {
+        header("Location: ".REDIRECTION_URL);
         exit;
      }
 ?>

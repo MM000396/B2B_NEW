@@ -5,11 +5,11 @@ require_once('../includes/language-switch.php');
 require_once('../.env.php');
 ?>
 <?php
-    $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-    if (strpos($ref, REFERER_URL) === false) {
-        header("Location: ".REDIRECTION_URL);
-        exit;
-     }
+    // $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+    // if (strpos($ref, REFERER_URL) === false) {
+    //     header("Location: ".REDIRECTION_URL);
+    //     exit;
+    //  }
 ?>
     <div class="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div class="sm:mx-auto sm:w-full sm:max-w-md">

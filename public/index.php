@@ -7,7 +7,7 @@ require_once('../.env.php');
 <?php
     $ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
     if (strpos($ref, REFERER_URL) === false) {
-        header("Location: ".PORTAL_URL);
+        header("Location: ".REDIRECTION_URL);
         exit;
      }
 ?>
